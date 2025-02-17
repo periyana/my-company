@@ -152,13 +152,7 @@ const HomePage = () => {
     <div className="flex flex-col min-h-screen bg-gray-50">
       <header className="bg-blue-600 text-white fixed top-0 left-0 w-full z-50 shadow-lg">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center py-4 px-6">
-<<<<<<< HEAD
-          {/* Judul/Logo Perusahaan */}
-          <h1 className="text-2xl font-bold">Pritech Solutions</h1>
-          {/* Navigasi */}
-=======
           <h1 className="text-2xl font-bold">Peritech Solutions</h1>
->>>>>>> d3b2367 (Update)
           <nav>
             <ul className="flex flex-col md:flex-row mt-4 md:mt-0 space-y-2 md:space-y-0 md:space-x-8">
               <li>
