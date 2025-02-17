@@ -1,8 +1,8 @@
 {
-  "name": "company-app",
+  "name": "my-company-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://periyana.github.io/company/",
+  "homepage": "https://periyana.github.io/my-company",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -12,6 +12,7 @@
     "company-app": "file:",
     "emailjs-com": "^3.2.0",
     "lucide-react": "^0.475.0",
+    "my-company-app": "file:",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
