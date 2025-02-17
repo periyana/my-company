@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { Camera, Cpu, Network } from "lucide-react"; // Pastikan sudah terinstal
+import { Camera, Cpu, Network } from "lucide-react";
+import client1 from "../assets/images/my client Kim's Residence.jpg";
+import client2 from "../assets/images/Kos Royani 2 m19 MB.jpeg";
+import client3 from "../assets/images/cove.jpg";
 
 const HomePage = () => {
   const [activeTab, setActiveTab] = useState("welcome");
@@ -13,10 +16,8 @@ const HomePage = () => {
     const service = formData.get("service");
     const message = formData.get("message");
 
-    // Susun pesan
     const finalMessage = `Name: ${userName}\nEmail: ${userEmail}\nService: ${service}\nMessage: ${message}`;
     const encodedMessage = encodeURIComponent(finalMessage);
-
     const whatsappUrl = `https://wa.me/6285694719227?text=${encodedMessage}`;
     window.open(whatsappUrl, "_blank");
   };
@@ -28,7 +29,7 @@ const HomePage = () => {
           <section className="h-screen bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500 flex flex-col items-center justify-center relative overflow-hidden">
             <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full opacity-20 transform -translate-x-20 -translate-y-20"></div>
             <div className="absolute bottom-0 right-0 w-80 h-80 bg-white rounded-full opacity-30 transform translate-x-10 translate-y-10"></div>
-            <h1 className="text-5xl font-extrabold text-white mb-4 z-10 drop-shadow-lg">Welcome to Pritech Solutions</h1>
+            <h1 className="text-5xl font-extrabold text-white mb-4 z-10 drop-shadow-lg">Welcome to Peritech Solutions</h1>
             <p className="text-lg text-white mb-6 z-10 drop-shadow-md">Empowering Your Technology Needs with Professional Solutions</p>
             <button onClick={() => setActiveTab("contact")} className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-blue-700 transition z-10">
               Learn More
@@ -55,8 +56,46 @@ const HomePage = () => {
             <div className="container mx-auto text-center">
               <h3 className="text-4xl font-bold mb-6 text-gray-800">About Us</h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                At Pritech Solutions, we deliver top-tier technology services tailored to your needs. Our team is committed to innovation, excellence, and building lasting partnerships based on trust.
+                At Peritech Solutions, we deliver top-tier technology services tailored to your needs. Our team is committed to innovation, excellence, and building lasting partnerships based on trust.
               </p>
+              {/* Tambahan Visi dan Misi */}
+              <div className="mt-10">
+                <h4 className="text-3xl font-semibold text-blue-600 mb-4">Our Vision</h4>
+                <p className="text-lg text-gray-600 mb-8">
+                  To become the leading provider of innovative technology solutions, empowering businesses and individuals to achieve their goals through reliable, efficient, and cutting-edge services.
+                </p>
+                <h4 className="text-3xl font-semibold text-blue-600 mb-4">Our Mission</h4>
+                <ul className="text-lg text-gray-600 space-y-4 mb-12">
+                  <li>1. Deliver high-quality and customized technology services for every client.</li>
+                  <li>2. Build long-term partnerships through trust, professionalism, and innovation.</li>
+                  <li>3. Provide solutions that enhance productivity and security for businesses and individuals alike.</li>
+                  <li>4. Continuously adapt and grow in line with technological advancements.</li>
+                </ul>
+              </div>
+              {/* Daftar Client */}
+              <div className="mt-16">
+                <h4 className="text-3xl font-bold text-blue-600 mb-8">Our Clients</h4>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {/* Client 1 */}
+                  <div className="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+                    <img src={client1} alt="Client 1" className="w-32 h-32 object-cover rounded-full mb-4" />
+                    <h5 className="text-xl font-bold text-gray-800">Kims Residence</h5>
+                    <p className="text-gray-600 text-center">"Providing reliable CCTV installation and maintenance services, along with expert networking solutions to ensure seamless connectivity for small business owners."</p>
+                  </div>
+                  {/* Client 2 */}
+                  <div className="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+                    <img src={client2} alt="Client 2" className="w-32 h-32 object-cover rounded-full mb-4" />
+                    <h5 className="text-xl font-bold text-gray-800">Kost Royani 2 19 MB</h5>
+                    <p className="text-gray-600 text-center">"Providing reliable CCTV installation and maintenance services, along with expert networking solutions to ensure seamless connectivity for small business owners."</p>
+                  </div>
+                  {/* Client 3 */}
+                  <div className="flex flex-col items-center bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+                    <img src={client3} alt="Client 3" className="w-32 h-32 object-cover rounded-full mb-4" />
+                    <h5 className="text-xl font-bold text-gray-800">Kosan Cove</h5>
+                    <p className="text-gray-600 text-center">Providing reliable CCTV installation and maintenance services, along with expert networking solutions to ensure seamless connectivity for small business owners.</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         );
@@ -111,12 +150,15 @@ const HomePage = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-50">
-      {/* Header */}
       <header className="bg-blue-600 text-white fixed top-0 left-0 w-full z-50 shadow-lg">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center py-4 px-6">
+<<<<<<< HEAD
           {/* Judul/Logo Perusahaan */}
           <h1 className="text-2xl font-bold">Pritech Solutions</h1>
           {/* Navigasi */}
+=======
+          <h1 className="text-2xl font-bold">Peritech Solutions</h1>
+>>>>>>> d3b2367 (Update)
           <nav>
             <ul className="flex flex-col md:flex-row mt-4 md:mt-0 space-y-2 md:space-y-0 md:space-x-8">
               <li>
@@ -143,18 +185,10 @@ const HomePage = () => {
           </nav>
         </div>
       </header>
-
-      {/* Main Content */}
       <main className="flex-grow pt-20">{renderContent()}</main>
-
-      {/* Footer (ditampilkan hanya jika activeTab adalah "contact") */}
-      {activeTab === "contact" && (
-        <footer className="bg-blue-600 text-white py-6 mt-10">
-          <div className="container mx-auto text-center">
-            <p>&copy; {new Date().getFullYear()} Pritech Solutions. All rights reserved.</p>
-          </div>
-        </footer>
-      )}
+      <footer className="bg-blue-600 text-white py-4 text-center">
+        <p>&copy; 2025 Peritech Solutions. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
